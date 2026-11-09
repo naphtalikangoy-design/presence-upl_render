@@ -1,0 +1,15 @@
+{
+  "name": "UPL PRESENCE",
+  "short_name": "UPL Présence",
+  "description": "Pointage des stagiaires de l'Université Protestante de Lubumbashi",
+  "start_url": "/stagiaire/pointage",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b1f3a",
+  "theme_color": "#0b1f3a",
+  "lang": "fr",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

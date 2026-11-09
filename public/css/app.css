@@ -1,0 +1,39 @@
+:root{--upl-navy:#0b1f3a;--upl-gold:#c9a227;--upl-bg:#f4f6fa}
+body{background:var(--upl-bg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.upl-nav{background:var(--upl-navy)}.upl-nav .navbar-brand{color:#fff}.gold{color:var(--upl-gold)}
+.card{border:0;border-radius:14px;box-shadow:0 2px 12px rgba(11,31,58,.08)}
+.btn-upl{background:var(--upl-navy);color:#fff;border:0;border-radius:12px;padding:1rem 1.5rem;font-weight:600;letter-spacing:.03em;transition:.2s}
+.btn-upl:hover:not(:disabled){background:#14325c;transform:translateY(-1px)}
+.btn-upl:disabled{background:#9aa6b8;cursor:not-allowed}
+.check{display:flex;justify-content:space-between;align-items:center;padding:.6rem .9rem;border-bottom:1px solid #eef1f6}
+.check:last-child{border:0}
+.pill{border-radius:20px;padding:.15rem .7rem;font-size:.8rem;font-weight:600}
+.pill.ok{background:#e3f6ea;color:#176b3a}.pill.ko{background:#fdeaea;color:#a12626}.pill.wait{background:#eef1f6;color:#5b6678}
+.btn-gold{background:var(--upl-gold);color:#0b1f3a;font-weight:600;border:0;border-radius:10px}.btn-gold:hover{background:#d9b53a;color:#0b1f3a}
+.upl-nav .nav-link{color:#dfe6f2}.upl-nav .nav-link:hover{color:var(--upl-gold)}
+.upl-logo{height:36px}.upl-logo-ph{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;background:var(--upl-gold);color:var(--upl-navy);font-weight:800;font-size:.8rem}
+.hero{background:linear-gradient(135deg,#0b1f3a 0%,#173a6b 100%);color:#fff;border-radius:20px;padding:4rem 2rem;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(201,162,39,.15)}
+.hero h1{font-weight:800;letter-spacing:-.02em}
+.feature{padding:1.5rem;height:100%;transition:.2s}.feature:hover{transform:translateY(-3px)}
+.feature i{font-size:1.8rem;color:var(--upl-gold)}
+.step-n{width:42px;height:42px;border-radius:50%;background:var(--upl-navy);color:var(--upl-gold);display:flex;align-items:center;justify-content:center;font-weight:700;flex:none}
+.site-footer{background:var(--upl-navy);color:#b9c4d8;border-radius:16px;padding:2rem;margin-top:3rem}
+.admin-shell{min-height:100vh}.min-w-0{min-width:0}
+.admin-side{width:260px;flex:none;background:var(--upl-navy);min-height:100vh}
+.side-group{color:#7f90ad;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;padding:1rem 1rem .3rem}
+.side-link{display:block;color:#dfe6f2;padding:.5rem 1rem;text-decoration:none;font-size:.9rem;border-left:3px solid transparent}
+.side-link i{margin-right:.5rem;color:var(--upl-gold)}.side-link:hover{background:rgba(255,255,255,.06);color:#fff}
+.side-link.active{background:rgba(201,162,39,.14);border-left-color:var(--upl-gold);color:#fff}
+.admin-top{height:58px;background:#fff;border-bottom:1px solid #e5e9f0;position:sticky;top:0;z-index:10}
+.stat{padding:1.1rem 1.2rem}.stat .n{font-size:1.9rem;font-weight:800;color:var(--upl-navy);line-height:1}.stat .l{color:#6b7689;font-size:.82rem}
+.table thead th{background:#eef1f7;color:#34425a;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;border:0}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal .h{font-size:.75rem;color:#6b7689;text-align:center;font-weight:600}
+.cal .d{aspect-ratio:1;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.9rem;background:#fff;border:1px solid #e5e9f0}
+.cal .ok{background:#2fa35b;color:#fff;border-color:#2fa35b}.cal .absent{background:#d94545;color:#fff;border-color:#d94545}
+.cal .late{background:#f08c1d;color:#fff;border-color:#f08c1d}.cal .off{background:#cfd4dc;color:#fff;border-color:#cfd4dc}
+.cal .today{outline:2px solid var(--upl-gold)}.cal .blank{visibility:hidden}
+.avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--upl-navy);color:var(--upl-gold);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700}
+#map{height:420px;border-radius:14px}
+@media print{.upl-nav,.admin-side,.admin-top,.no-print{display:none!important}.card{box-shadow:none;border:1px solid #ccc}}

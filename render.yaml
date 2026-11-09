@@ -1,0 +1,55 @@
+# Blueprint Render : service web Docker + base PostgreSQL.
+# Vérifiez les offres/limites actuelles de Render (les formules gratuites peuvent expirer ou se mettre en veille).
+databases:
+  - name: upl-db
+    databaseName: upl_presence
+    user: upl
+    plan: free
+
+services:
+  - type: web
+    name: upl-presence
+    runtime: docker
+    plan: free
+    healthCheckPath: /connexion
+    envVars:
+      - key: APP_NAME
+        value: UPL PRESENCE
+      - key: APP_ENV
+        value: staging            # "production" INTERDIT le mode démo ; passez à production + UPL_NETWORK_MODE=reel pour l'exploitation réelle
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        sync: false               # à générer en local : php artisan key:generate --show
+      - key: APP_URL
+        sync: false               # ex. https://upl-presence.onrender.com
+      - key: APP_TIMEZONE
+        value: Africa/Lubumbashi
+      - key: APP_LOCALE
+        value: fr
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_URL
+        fromDatabase:
+          name: upl-db
+          property: connectionString
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: MAIL_MAILER
+        value: log
+      - key: UPL_NETWORK_MODE
+        value: demo
+      - key: UPL_DEMO_SCENARIO
+        value: interieur
+      - key: UPL_WEBHOOK_SECRET
+        generateValue: true
+      - key: UPL_ADMIN_MATRICULE
+        sync: false
+      - key: UPL_ADMIN_EMAIL
+        sync: false
+      - key: UPL_ADMIN_PASSWORD
+        sync: false               # à SUPPRIMER de Render une fois le compte créé

@@ -1,0 +1,1 @@
+@if(file_exists(public_path('uploads/logo.png')))<img src="{{ asset('uploads/logo.png') }}?v={{ filemtime(public_path('uploads/logo.png')) }}" alt="Logo UPL" class="upl-logo">@else<span class="upl-logo-ph">UPL</span>@endif
